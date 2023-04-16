@@ -32,9 +32,16 @@ class Solution :
             for x in range(-k, k+1):
                 for y in range(-k, k+1):
                     # Lấy vị trí của những ông bên trái phải trên dưới follow to i và j
-                    # 3 5 6
-                    # 4 5 1
-                    #
+                    # 1 3 5 6 6
+                    # 4 5 1 12 5
+                    # 8 4 6 2 1
+                    
+                    # vi du filtered_image[i][j] = 1 => 
+                    # neiber = [
+                    #   3 5 6
+                    #   5 1 12
+                    #   4 6 2
+                    # ] => sort to take middle = 1 2 3 4(replace 1 to 4) 5 5 6 12
                     if i+x >= 0 and i+x < m and j+y >= 0 and j+y < n:
                         neighbors.append(image[i+x, j+y])
 
